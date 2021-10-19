@@ -1,0 +1,7 @@
+:root{
+    --default:#9900ff;
+}
+#navbar-brand{
+    font-size: large;
+    font-weight: bolder;
+}
