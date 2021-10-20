@@ -39,16 +39,14 @@ function Add(e)
         return false;
     else
         document.getElementById("item").value = "";
-  
+
+/*     let checkBox = document.createElement("input");
+    checkBox.type="checkbox"; */
+    //checkBox.className = "form-check-input me-2"
+
+
     let li = document.createElement("li");
     li.className = "list-group-item";
-
-    //for checkbox
-    /* var checkbox = document.createElement('input');
-    checkbox.type = "checkbox";
-    checkbox.value = "value";
-    checkbox.className = "form-check-input me-2";
-    checkbox.id = "flexCheck"; */
 
     //for Delete button
     let deleteButton = document.createElement("button");
@@ -61,7 +59,7 @@ function Add(e)
     editButton.appendChild(document.createTextNode("Edit"));
 
     //appending items
-    //li.appendChild(checkbox); 
+    //li.appendChild(checkBox);
     li.appendChild(document.createTextNode(newItem));
     li.appendChild(deleteButton);
     li.appendChild(editButton);
@@ -85,7 +83,7 @@ function Delete(e)
   }
 
 //editing an item
-  if (e.target.classList.contains("Edit")) {
+  if (e.target.classList.contains("edit")) {
     document.getElementById("item").value = e.target.parentNode.childNodes[0].data;
     submit.value = "Edit";
     editItem = e;
